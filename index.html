@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>user@dev: ~/terminal-platformer</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="term">
+    <div id="titlebar">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span id="title">user@dev: ~/terminal-platformer — zsh</span>
+    </div>
+    <div id="hud">
+      <span id="hud-level">> level_001.sys</span>
+      <span id="hud-stats">deaths: 0 | time: 0.0s | shards: 0</span>
+      <span id="hud-help">[A/D] move &nbsp; [W] jump / wall-jump &nbsp; [S] slam &nbsp; [R] retry &nbsp; [M] sound &nbsp; stomp bugs!</span>
+    </div>
+    <div id="canvas-wrap">
+      <canvas id="game" width="960" height="540"></canvas>
+      <div id="scanlines"></div>
+      <div id="overlay" class="hidden">
+        <div id="overlay-title">$ ./run_level.sh</div>
+        <div id="overlay-body"></div>
+        <div id="overlay-hint">press <b>W</b> / <b>Enter</b> to continue</div>
+      </div>
+    </div>
+    <div id="log"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
